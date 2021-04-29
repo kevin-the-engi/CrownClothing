@@ -10,26 +10,15 @@ const HatsPage = () => (
   </div>
 )
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        {/* <Switch> */}
+const App = () => {
+  return (
+    <div>
+      <Switch>
+        <Route exact path='/' component={Homepage} />
         <Route path='/hats' component={HatsPage} />
-
-          <Route path='/' component={Homepage} />
-        {/* </Switch> */}
-      </div>
-    )
-  }
+      </Switch>
+    </div>
+  )
 }
 
 export default App;

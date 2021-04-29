@@ -14,12 +14,13 @@ const Directory = (props) => {
   return (
     <div className="directory">
       {
-        sections.map(({ title, imageUrl, size, id }) => (
+        sections.map(({ id, ...otherSectionProps }) => (
           <Card
-            title={title}
-            imageUrl={imageUrl}
-            size={size}
+            // title={title}
+            // imageUrl={imageUrl}
+            // size={size}
             key={id}
+            {...otherSectionProps}
           />
         ))
       }
