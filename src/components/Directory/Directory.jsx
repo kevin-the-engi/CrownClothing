@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Directory.scss';
-import data from '../../dummyData.js';
+import data from '../../data/dummyData.js';
 
 import Card from '../Card/Card.jsx';
 
