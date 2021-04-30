@@ -1,4 +1,4 @@
-# Crown Shopping
+# Crown Clothing
 
 ### A front-end E-Commerce project
 
