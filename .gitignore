@@ -1,6 +1,9 @@
 # Bundle
 bundle.js
 
+# Firebase
+firebase/
+
 # Logs
 logs
 *.log
