@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
 import './SignIn.scss';
 
+import FormInput from '../FormInput/FormInput.jsx';
+
 const SignIn = () => {
   const [signInInfo, setSignInInfo] = useState({
     email: '',
     password: ''
-  })
+  });
 
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-  }
+  };
 
-  handleSubmit = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
 
     setSignInInfo({
       [name]: value
-    })
-  }
+    });
+  };
 
   return (
     <div className="sign-in">
@@ -25,22 +27,22 @@ const SignIn = () => {
       <span>Sign in with your email and password</span>
 
       <form onSubmit={handleSubmit}>
-        <input
+        <FormInput
           type="email"
           name="email"
           value={signInInfo.email}
-          onChange={handleChange}
+          handleChange={handleChange}
+          label="email"
           required
         />
-        <label htmlFor="email">Email</label>
-        <input
+        <FormInput
           type="password"
           name="password"
           value={signInInfo.password}
-          onChange={handleChange}
+          handleChange={handleChange}
+          label="password"
           required
         />
-        <label htmlFor="password">Password</label>
 
         <input type="submit" value="Submit Form" />
       </form>
